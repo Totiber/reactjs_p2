@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import tareas from './ejemplos/tareas.json';
+import Tareas from './components/Tareas';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+class App extends Component {
+
+  state = {
+
+    tareas: tareas
+
+  }
+
+  
+  render(){
+
+
+
+
+//  Aqui instanceamos el COMPONENTE Tareas en forma de etiqueta. Le pasamos una propiedad llamada datos. Que en react.js funciona como PARAMETRO de un componente.
+//  datos reoje los datos del estado. El flujo es el siguiente:
+
+//      tareas.json -----> state -----> Componente instanseado recoje del estado    -----> Componente real
+//                                      los datos mediante una PROPIEDAD  
+    return <div>
+
+      <Tareas datos = {this.state.tareas} />
+
     </div>
-  );
+  }
 }
-
 export default App;
