@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
+
+
+
+
+
 class Tareas extends Component {
+
     render() {
 
 // En la siguiente sentencia lo que estamos haciendo es recorrer el arreglo tareas sin ciclos. POR ITERACION
@@ -16,9 +22,14 @@ class Tareas extends Component {
 
         return this.props.datos.map(e => 
 
-        <p key= {e.id}>
+        <p key= {e.id} >
 
             {e.title} - {e.description} - {e.done} - {e.id}
+
+            <input type = "checkbox"/>
+            <button>
+                x
+            </button>
     
         </p>)
     }

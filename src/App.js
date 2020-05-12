@@ -6,6 +6,9 @@ import Tareas from './components/Tareas';
 
 class App extends Component {
 
+
+// state RECIBE los datos de JSON
+
   state = {
 
     tareas: tareas
@@ -19,9 +22,9 @@ class App extends Component {
 
 
 //  Aqui instanceamos el COMPONENTE Tareas en forma de etiqueta. Le pasamos una propiedad llamada datos. Que en react.js funciona como PARAMETRO de un componente.
-//  datos reoje los datos del estado. El flujo es el siguiente:
+//  "datos" recoje los datos del estado. El flujo es el siguiente:
 
-//      tareas.json -----> state -----> Componente instanseado recoje del estado    -----> Componente real
+//      tareas.json -----> state -----> Componente instanseado recoje del estado,    -----> Componente real
 //                                      los datos mediante una PROPIEDAD  
     return <div>
 
