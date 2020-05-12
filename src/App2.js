@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+
+// Componentes
 import tareas from './ejemplos/tareas.json';
-import Tareas2 from './components/Tareas';
+import Tareas2 from './components/Tareas2';
 
 
 
@@ -21,7 +23,7 @@ class App2 extends Component {
 
     return <div>
 
-      <Tareas2 datos = {this.state.tareas} />
+      <Tareas2 datos2 = {this.state.tareas} />
 
     </div>
   }

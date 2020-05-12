@@ -12,6 +12,11 @@ class Tareas extends Component {
 
     render() {
 
+
+//----------------------------- SE CONSTRUYE EL COMPONENTE CON LOS DATOS --------------------------------------------------------------
+
+
+
 // En la siguiente sentencia lo que estamos haciendo es recorrer el arreglo tareas sin ciclos. POR ITERACION
 
 // this.props.datos.map lo que esta haciendo es decir: Mira la propiedad datos de la etiqueta Tareas (que esta en la otra pagina) y recorre cada elemento que reciba datos.
@@ -37,5 +42,7 @@ class Tareas extends Component {
         </p>)
     }
 }
+
+// ----------------------------------------------------------------------------------------------------
 
 export default Tareas;
