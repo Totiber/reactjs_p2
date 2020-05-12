@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tarea2 from './Tarea2';
-
+import PropTypes from 'prop-types';
 
 
 class Tareas2 extends Component {
@@ -12,6 +12,13 @@ class Tareas2 extends Component {
 
         return this.props.datos.map(elemento => <Tarea2 datoTarea2 = {elemento} key = {datos.id} />);
     }
+}
+
+// PropTypes: Validar que el tipo de dato que debe llegar de la pagina anterior sea un Array
+Tareas2.PropTypes = {
+
+    datoTarea2: PropTypes.array.isRequired
+
 }
 
 export default Tareas2;

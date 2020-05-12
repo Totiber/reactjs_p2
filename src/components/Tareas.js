@@ -7,6 +7,9 @@ import React, { Component } from 'react';
 
 class Tareas extends Component {
 
+
+
+
     render() {
 
 // En la siguiente sentencia lo que estamos haciendo es recorrer el arreglo tareas sin ciclos. POR ITERACION
