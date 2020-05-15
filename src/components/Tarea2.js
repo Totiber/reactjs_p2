@@ -22,7 +22,7 @@ class Tarea2 extends Component {
 
         //Para no esccribir todo el rato this.props, transformamos la propiedad que viene de la etiqueta anterior en una variable constante que dentro tenga el this.props        
         const {datoTarea2} = this.props;
-        return <p  style= {this.StyleCompleted()}>
+        return <p>
 
             {datoTarea2.title} - 
             {datoTarea2.description} - 
@@ -39,10 +39,10 @@ class Tarea2 extends Component {
 }
 
 // PropTypes: Validamos que el tipo de dato que tiene que llegar de la pagina anterior sea un objeto. --- Revisar documentacion para mas propTypes
-Tarea2.PropTypes = {
+// Tarea2.PropTypes = {
 
-    datoTarea2: PropTypes.object.isRequired
+//     datoTarea2: PropTypes.object.isRequired
 
-}
+// }
 
 export default Tarea2;

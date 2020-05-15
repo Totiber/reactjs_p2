@@ -14,8 +14,8 @@ class TareasForm extends Component {
 
     enviar = (evento) => {
 
+        this.props.addTarea(this.state.title, this.state.descripcion);
         console.log (this.state);
-
     //  Para que la pagina no se refresque al hacer la accion enviar
         evento.preventDefault();
 
@@ -39,7 +39,8 @@ class TareasForm extends Component {
 
 
     render() {
-
+        
+//        this.props.addTarea();
 //------------------------------------- CREANDO LA ESTRUCTURA DE LO QUE EL USUARIO INGRESA ------------------------------
         return(
 

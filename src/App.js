@@ -16,7 +16,41 @@ class App extends Component {
 
   }
 
+// Funcion Agrega un elemento tarea
+  addTarea = (title, descripcion) => {
+
+    console.log(title, descripcion);
+
+  // crea variable constante con estados locales
+    const newTarea = {
+      title : title,
+      descripcion : descripcion,
+      id : this.state.tareas.length
+    }
+
+    console.log(newTarea);
+
+  // enviamos la variable creada al estado tareas. [...]: para agregar a loq ue ya estaba en e arreglo lo siguiente.
+    this.setState({
+      tareas : [...this.state.tareas, newTarea]
+    })
+  }
   
+
+  borrarTarea = (id) => {
+
+    const newTask = this.state.tareas.filter(tarea => tarea.id !== id);
+    console.log(newTask);
+
+  }
+
+
+  checkear = () => {
+
+
+
+  }
+
   render(){
 
 
@@ -30,8 +64,8 @@ class App extends Component {
 //                                      los datos mediante una PROPIEDAD  
     return <div>
 
-      <TareasForm/>
-      <Tareas datos = {this.state.tareas} />
+      <TareasForm addTarea = {this.addTarea}/>
+      <Tareas  />
 
     </div>
   }
