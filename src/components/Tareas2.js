@@ -10,7 +10,12 @@ class Tareas2 extends Component {
         // Este componente recorre cada elemento de tarea.json que viene llegando desde App2.js y por cada recorrido genera tareas independientes. Para pintar esto en 
         // pantalla lo enviamos al componente Tarea2, que es el que pinta todo en un div.. donde esta la estructura de la impresion.
 
-        return this.props.datos2.map(elemento => <Tarea2 datoTarea2 = {elemento} key = {this.props.datos2.id} />);
+        return this.props.datos2.map(elemento => 
+                                                <Tarea2 datoTarea2 = {elemento} 
+                                                        key = {this.props.datos2.id} 
+                                                        borrarTarea = {this.props.borrarTarea}
+                                                        checkearDone = {this.props.checkearDone}/> 
+                                     );
     }
 }
 

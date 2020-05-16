@@ -29,8 +29,8 @@ class Tarea2 extends Component {
             {datoTarea2.done} - 
             {datoTarea2.id}
             
-            <input type = "checkbox"/>
-            <button>
+            <input type = "checkbox" onChange = {this.props.checkearDone.bind(this, datoTarea2.id)}/>
+            <button onClick = {this.props.borrarTarea.bind(this, datoTarea2.id)}>
                 x
             </button>
 

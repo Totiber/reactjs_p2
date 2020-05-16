@@ -37,14 +37,47 @@ addTarea = (title, descripcion) => {
     tareas : [...this.state.tareas, newTarea]
   })
 }
+
+borrarTarea = (id) => {
+
+  // filtra tarea por id 
+  const newTask = this.state.tareas.filter(tareas => tareas.id !== id)
+
+  // modifica estado
+  this.setState({tareas: newTask})
+
   
+  console.log(newTask);
+}
+  
+// Funcion para manejar el checkbox. En este caso cambiamos true/false un elemento de la tarea (done)
+chekearDone = (id) => {
+
+// dice: quiero ver el estado de tareas.recorrerlo(por cada tarea que vas a recorrer => quiero un if)
+        const newTask2 = this.state.tareas.map(tareas => {
+          if (tareas.id === id) {
+//            cambia de true o/a false tareas.done
+            tareas.done = !tareas.done
+          } 
+
+          return tareas;
+        })
+
+        this.setState(newTask2)
+        
+        console.log(newTask2)
+}
+
+
   render(){
 
 
     return <div>
 
       <TareasForm addTarea = {this.addTarea}/>
-      <Tareas2 datos2 = {this.state.tareas} />
+      <Tareas2  datos2 = {this.state.tareas} 
+                borrarTarea = {this.borrarTarea}
+                checkearDone = {this.chekearDone}/>
 
     </div>
   }
